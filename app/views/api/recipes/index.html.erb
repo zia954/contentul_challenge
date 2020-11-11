@@ -1,0 +1,21 @@
+<h3>Recipes</h3>
+<table>
+  <thead>
+  <th>Title</th>
+  <th>Image</th>
+  <th>Actions</th>
+  </thead>
+  <tbody>
+  <% @recipes.each do |recipe| %>
+      <tr style="outline: thin solid">
+        <td><%= recipe.title %></td>
+        <td>
+          <img src="<%=recipe.photo.url %>" style="height: 100px"/>
+        </td>
+        <td>
+          <%= link_to 'view', api_recipe_path(recipe.id)%>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

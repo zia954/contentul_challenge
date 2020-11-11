@@ -1,0 +1,28 @@
+<table>
+  <thead>
+  <th>Title</th>
+  <th>Image</th>
+  <th>Tags</th>
+  <th>Description</th>
+  <th>Chef</th>
+  </thead>
+  <tbody>
+
+  <tr>
+    <td><%= @recipe.title %></td>
+    <td>
+      <img src="<%= @recipe.photo.url %>"/>
+    </td>
+    <td>
+      <%= @recipe.tags.map(&:name).join(', ') if @recipe.fields.key?(:tags) %>
+    </td>
+    <td>
+      <%= @recipe.description %>
+    </td>
+    <td>
+      <%= @recipe.chef.name if @recipe.fields.key?(:chef) %>
+    </td>
+
+  </tr>
+  </tbody>
+</table>
