@@ -6,6 +6,12 @@ You need to have following tools installed on your system.
 - Ruby [2.3.0]
 - Rails [5.0.0]
 
+##### 1. Clone the application from the git repository and run the following command in the application directory.
+
+```ruby
+ bundle install
+
+```
 
 ##### 2. Do database configurations in database.yml file
 
